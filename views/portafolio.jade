@@ -1,0 +1,49 @@
+extends layouts/layout-page1.jade
+block content
+    main.contenido_p_portafolio
+        //- Trabajos Realizados
+        section.trabajos_realizados_p
+            h1 NUESTROS TRABAJOS
+            p.descripcion_trabajos_p Estos son nuestros trabajos que hicimos y se siguen actualizando para que el sitio web tenga "vida".
+            .trabajos_realizados_contenedor_p
+                //- Trabajo 2
+                article.trabajo_2
+                    a(href='/')
+                        picture
+                            source(media='(max-width: 576px)', srcset='/assets/images/briefcase/dududu_sw_cel.webp')
+                            source(media='(min-width: 577px)', srcset='/assets/images/briefcase/dududu_sw.webp')
+                            img(src='/assets/images/briefcase/dududu_sw.webp', alt='Sitio web de DUDUDU')
+                    a(href='/')
+                        h2 SITIO WEB DE DUDUDU
+                    p
+                        span Categoría: 
+                        |  Sitio Web
+                    p
+                        span Descripción:
+                        |  Es un sitio web para nuestra agencia web.
+                    p
+                        span Explicación del proceso de trabajo:
+                        |  El sitio web fue programado con código desde cero, inicio con HTML y CSS, pero actualmente usa NODE.JS (PUG, JavaScript y CSS) y MySQL. Sí, ya tenemos Backend. Para el SEO se usa meta-tags, Rich snippets y un correcto uso de las etiquetas de html.
+                    form(action='/')
+                        button(type='submit') Ir a ... ya estás aquí
+                //- Trabajo 1
+                article.trabajo_1
+                    a(href='https://alvaluna.groupcusco.com/', target='_blank', rel='noopener noreferrer')
+                        picture
+                            source(media='(max-width: 576px)', srcset='/assets/images/briefcase/alvaluna_sw_cel.webp')
+                            source(media='(min-width: 577px)', srcset='/assets/images/briefcase/alvaluna_sw.webp')
+                            img(src='/assets/images/briefcase/alvaluna_sw.webp', alt='Sitio web de AlvaLuna')
+                    a(href='https://alvaluna.groupcusco.com/', target='_blank', rel='noopener noreferrer')
+                        h2 SITIO WEB DE ALVALUNA
+                    p
+                        span Categoría:
+                        |  Sitio Web
+                    p
+                        span Descripción:
+                        |  Es un sitio web para una agencia de marketing aliada.
+                    p
+                        span Explicación del proceso de trabajo:
+                        |  El sitio web fue hecho con WordPress.org junto con algunos plugins como Elementor (como editor visual para darle estilos) y Rank Math SEO (para el posicionamiento en la web).
+                    form(action='https://alvaluna.groupcusco.com/', target='_blank', rel='noopener noreferrer')
+                        button(type='submit') Ir a su sitio web
+

@@ -16,4 +16,9 @@ router.get('/servicios', function(req, res, next) {
   res.render('servicios', { title: 'SERVICIOS' });
 });
 
+/* GET portafolio page (portafolio.jade). */
+router.get('/portafolio', function(req, res, next) {
+  res.render('portafolio', { title: 'PORTAFOLIO' });
+});
+
 module.exports = router;

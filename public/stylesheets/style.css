@@ -1,0 +1,1093 @@
+/* 
+    CONTENIDO
+    
+    PAGINA DE INICIO
+    PAGINA DE QUIENES SOMOS
+    PAGINA DE SERVICIOS
+    PAGINA DE PORTAFOLIO 
+    PAGINA DE BLOG
+    PAGINA DE LOS ARTICULOS
+    PÁGINA DEL ERROR 404
+*/
+
+/* PAGINA DE INICIO */
+/* Fondo del sitio web */
+.inicio {
+    background-color: #eeeeee;
+    background-image: url("/assets/pattern/pattern.svg");
+    background-repeat: repeat;
+    background-size: 2rem 2rem;
+}
+/* ESTILOS DEL HEADER*/
+/* Poniendo la imagen de fondo */
+.img_inicial {
+    font-size: 14px;
+    width: 100%;
+    min-width: 300px;
+    height: 74vw;
+    border-bottom: 16px solid #eeeeee;
+
+    background-image: url("/assets/images/home/inicio_principal_bg.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Estilos para el menú */
+.menu_principal {
+    padding: 0em 1em;
+    display: grid;
+    grid-template-columns: 2fr 1fr;  
+}
+.logo_m img {
+    max-width: 300px;
+    max-height: 300px;
+    height: 10vw;
+}
+.pag_sec_m {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(5em,1fr))
+}
+/* Quitando el subrayado del hipervinculo */
+.menu_principal div a{
+    text-decoration: none;
+    font-size: 1em;
+}
+/* Acomodando los elementos internos */
+.menu_principal div {
+    padding: 1em 0em;
+}
+.logo_m {
+    align-self: center;
+}
+.quienes_somos_m, .servicios_m, .portafolio_m, .contacto_m, .blog_m, .demos_m {
+    text-align: right;
+}
+
+/* WhatsApp Flotante */
+.link_flotante_wp {
+    position: fixed;
+    width: 3em;
+    height: 3em;
+    bottom: 2.5vw;
+    right: 2.5vh;
+    background-color: #eeeeee;
+    text-decoration: none;
+    color: #023E73;
+    text-align: center;
+    padding: 3px;
+    border-radius: 3em;
+    box-shadow: 0px 1px 10px #1d1d1d;
+    z-index: 1;
+}
+.link_flotante_wp:hover {
+    color: #eeeeee;
+    background: #023E73;
+}
+
+
+/* ESTILOS DEL CONTENIDO */
+/* Estilos generales */
+.contenido_p_inicio {
+    max-width: 2000px; 
+    min-width: 300px;  
+}
+/* Para los botones */
+.contenido_p_inicio button{
+    border-style: none;
+    background-color: #023E73;
+    color: #eeeeee;
+    border: 2px solid #1d1d1d;
+}
+
+/* Alineamiento interno de llamada a la acción*/
+.llamada_accion_1 {
+    padding: 18.50vw 0vw 0vw;
+    width: 100%;
+    height: 55.5vw;
+    display: grid;
+    /* grid-gap: 2rem; */
+    grid-auto-flow: row;
+    grid-template-rows: repeat(9, 1fr);
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "titulo blanco"
+    "parrafo blanco"
+    "boton blanco";
+
+    background-image: url("/assets/images/home/grupo.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.llamada_accion_1 h1 {
+    margin: 0rem;
+    padding: 1rem 2rem 0.5rem 2rem;
+    grid-area: titulo;
+    text-align: center;
+    background-color: hsla(0, 0%, 93%, 0.50);
+}
+.llamada_accion_1 p {
+    margin: 0rem;
+    padding: 0.5rem 2rem 1rem 2rem;
+    grid-area: parrafo;
+    text-align: justify;
+    background-color: hsla(0, 0%, 93%, 0.50);
+}
+.llamada_accion_1 form {
+    padding: 0rem 2rem 1rem 2rem;
+    grid-area: boton;
+    text-align: center;
+    background-color: hsla(0, 0%, 93%, 0.50);
+}
+
+
+/* Maquetado de los elementos de problemas cliente - contenedor con grid*/
+.problemas_contenedor_i {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(10rem,1fr)); 
+}
+
+/* Alineamiento interno de problemas cliente*/
+.problemas_cliente_i {
+    padding: 2rem;
+}
+.problemas_cliente_i h2 {
+    margin: 0rem;
+    text-align: center;
+    padding: 0rem 1rem 1rem;
+}
+.problemas_contenedor_i article {
+    text-align: center;
+}
+.problemas_cliente_i form {
+    text-align: center;
+    padding: 1rem 0rem 0rem;
+}
+.problemas_contenedor_i article h3 {
+    margin: 0rem;
+    padding: 1rem;
+}
+
+
+/* Alineamiento interno de minibio*/
+.mini_bio_i {
+    padding: 18.50vw 0vw 0vw;
+    width: 100%;
+    height: 55.5vw;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-rows: repeat(9, 1fr);
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "blanco titulo_1"
+    "blanco titulo_2"
+    "blanco parrafo"
+    "blanco boton";
+
+    background-image: url("/assets/images/home/inicio_bio.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* .mini_bio_i {
+    padding: 0rem 2rem 2rem;
+} */
+.mini_bio_i h2 {
+    margin: 0rem;
+    padding: 1rem 2rem 0rem;
+    text-align: center;
+    grid-area: titulo_1;
+    background-color: hsla(0, 0%, 93%, 0.50);
+}
+.mini_bio_i h3 {
+    margin: 0rem;
+    padding: 0rem 2rem;
+    text-align: center;
+    grid-area: titulo_2;
+    background-color: hsla(0, 0%, 93%, 0.50);
+}
+.mini_bio_i p {
+    margin: 0rem;
+    padding: 1rem 2rem;
+    text-align: justify;
+    grid-area: parrafo;
+    background-color: hsla(0, 0%, 93%, 0.50);
+}
+.mini_bio_i form {
+    padding: 0rem 2rem 1rem;
+    text-align: center;
+    grid-area: boton;
+    background-color: hsla(0, 0%, 93%, 0.50);
+}
+
+/* Maquetado de los elementos de enlaces a otras paginas con grid*/
+.enlaces_contenedor_i {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(15rem,1fr)); 
+}
+
+/* Alineamiento interno de minibio enlaces a otras paginas*/
+.enlaces_i {
+    padding: 2rem;
+}
+.enlaces_i h2 {
+    margin: 0rem;
+    text-align: center;
+    padding: 0rem 1rem 1rem;
+}
+.enlaces_contenedor_i article, .enlaces_contenedor_i article form {
+    text-align: center;
+}
+.enlaces_contenedor_i article h3 {
+    margin: 0rem;
+    padding: 0rem 1rem;
+}
+.enlaces_contenedor_i article p {
+    margin: 0rem;
+    padding: 1rem;
+}
+
+/* ESTILOS PARA EL FOOTER */
+footer {
+    padding: 2rem;
+    background-color: #1d1d1d;
+}
+footer p {
+    margin: 0rem;
+}
+/* CONTACTO (EN EL FOOTER) */
+/* Maquetando contactos y redes sociales con grid */
+.contactanos_redes_footer {
+    padding: 0rem 0rem 2rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+}
+.contactanos_footer a {
+    text-decoration: none;
+    color: #eeeeee;
+}
+.redes_fondo {
+    width: 100%;
+    height: 60px;
+    margin-top: 1rem;
+}
+.redes_fondo a {
+    background-color: #eeeeee;
+    text-decoration: none;
+    color: #1d1d1d;
+    text-align: center;
+    padding: 0.25rem 0.75rem;
+    margin: 0.25rem;
+    border-radius: 0.5rem;
+    font-size: 2rem;
+}
+.link_footer_politica_privacidad a {
+    text-decoration: none;
+    color: #eeeeee;
+}
+
+
+/* PAGINA DE QUIENES SOMOS */
+/* Fondo del sitio web */
+.quienes_somos {
+    background-color: #eeeeee;
+    background-image: url("/assets/pattern/pattern.svg");
+    background-repeat: repeat;
+    background-size: 2rem 2rem;
+}
+/* ESTILOS DEL HEADER*/
+/* Poniendo la color de fondo */
+.cabecera_estandar {
+    font-size: 14px;
+    width: 100%;
+    min-width: 300px;
+    padding: 0rem;
+    background-color: #1d1d1d;
+}
+
+/* Estilos para el menú */
+.menu_estandar {
+    padding: 0em 1em;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+.logo_me img {
+    max-width: 300px;
+    max-height: 300px;
+    height: 10vw;
+}
+.pag_sec_me {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(5em,1fr))
+}
+/* Quitando el subrayado del hipervinculo */
+.menu_estandar div a{
+    text-decoration: none;
+    font-size: 1em;
+}
+/* Acomodando los elementos internos */
+.menu_estandar div {
+    padding: 1em 0em;
+}
+.logo_me {
+    align-self: center;
+}
+.quienes_somos_me, .servicios_me, .portafolio_me, .blog_me, .demos_me, .quienes_somos_me_a, .servicios_me_a, .portafolio_me_a, .blog_me_a, .demos_me_a {
+    text-align: right;
+}
+/* Para saber donde estamos */
+.quienes_somos_me_a {
+    text-decoration-line: underline overline;
+}
+/* ESTILOS DEL CONTENIDO */
+/* Estilos generales */
+.contenido_p_quienes_somos {
+    max-width: 2000px; 
+    min-width: 300px;  
+}
+/* Para los botones */
+.contenido_p_quienes_somos button{
+    border-style: none;
+    background-color: #023E73;
+    color: #eeeeee;
+    border: 2px solid #1d1d1d;
+}
+/* MISIÓN, VISIÓN Y VALORES */
+/* Maquetado de los elementos de misión, visión y valores - contenedor con grid*/
+.mision_vision_contenedor {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(10rem,1fr)); 
+}
+/* Alineamiento interno de misión, visión y valores*/
+.mision_vision {
+    padding: 2rem;
+}
+.mision_vision h1 {
+    margin: 0rem;
+    text-align: center;
+    padding: 0rem 1rem 1rem;
+}
+.contenido_p_quienes_somos article {
+    text-align: center;
+}
+.mision_vision article h2 {
+    margin: 0rem;
+    padding: 1rem;
+}
+.valores_quienes_somos ul li{
+    list-style-type: none;
+}
+.valores_quienes_somos ul {
+    padding: 0rem;
+}
+/* Alineamiento interno de porque lo hacemos*/
+.porque_lo_hacemos {
+    padding: 18.50vw 0vw 0vw;
+    width: 100%;
+    height: 55.5vw;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "titulo blanco"
+    "parrafo blanco";
+
+    background-image: url("/assets/images/quienes_somos_porque.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.porque_lo_hacemos h2 {
+    margin: 0rem;
+    padding: 1rem 2rem 0.5rem 2rem;
+    grid-area: titulo;
+    text-align: center;
+    background-color: hsla(0, 0%, 93%, 0.50);
+}
+.porque_lo_hacemos p {
+    margin: 0rem;
+    padding: 0.5rem 2rem 1rem 2rem;
+    grid-area: parrafo;
+    text-align: justify;
+    background-color: hsla(0, 0%, 93%, 0.50);
+}
+/* Alineamiento interno de servicios en quienes somos */
+.servicios_quienes_somos {
+    text-align: center;
+    padding: 2rem;
+}
+.servicios_quienes_somos h2 {
+    margin: 0rem;
+    padding: 0rem 0rem 1rem;
+}
+
+
+/* PAGINA DE SERVICIOS */
+/* Fondo del sitio web */
+.servicios {
+    background-color: #eeeeee;
+    background-image: url("/assets/pattern/pattern.svg");
+    background-repeat: repeat;
+    background-size: 2rem 2rem;
+}
+/* Header */
+.servicios_me_a {
+    text-decoration-line: underline overline;
+}
+/* ESTILOS DEL CONTENIDO */
+/* Estilos generales */
+.contenido_p_servicios {
+    max-width: 2000px; 
+    min-width: 300px;  
+}
+/* Para los botones */
+.contenido_p_servicios button{
+    border-style: none;
+    background-color: #023E73;
+    color: #eeeeee;
+    border: 2px solid #1d1d1d;
+}
+
+/* Maquetado de los elementos de problemas cliente - contenedor en servicios con grid*/
+.problema_cliente_contenedor_s {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(10rem,1fr)); 
+}
+
+/* Alineamiento interno de problemas cliente en servicios*/
+.problemas_s {
+    padding: 2rem;
+}
+.problemas_s h1, .problemas_cliente_s h2 {
+    margin: 0rem;
+    text-align: center;
+    padding: 0rem 0rem 1rem;
+}
+.problema_cliente_contenedor_s article {
+    text-align: center;
+}
+.problemas_cliente_s  form {
+    text-align: center;
+    padding: 1rem 0rem 0rem;
+}
+.problema_cliente_contenedor_s article h3 {
+    margin: 0rem;
+    padding: 1rem;
+}
+/* Maquetado de los elementos de Nuestros sevicios - contenedor en servicios con grid*/
+.nuestros_servicios_contenedor_s {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(3, minmax(10rem,1fr)); 
+}
+/* Alineamiento interno de Nuestros sevicios en servicios e imagenes de fondo*/
+.nuestros_servicios_s {
+    padding: 2rem 2rem 2rem;
+    background-image: url("/assets/images/meet.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.nuestros_servicios_s h2 {
+    margin: 0rem;
+    text-align: center;
+    padding: 1rem 0rem 1rem;
+}
+.subtitulo_servicios_s {
+    width: 20rem;
+    margin: 0rem auto 1rem;
+    background-color: hsla(0, 0%, 93%, 0.50);
+}
+.nuestros_servicios_contenedor_s article p{
+    margin: 0rem;
+    padding: 0rem 1rem 1rem;
+    text-align: center;
+}
+.nuestros_servicios_contenedor_s form {
+    text-align: center;
+    padding: 1rem;
+}
+.nuestros_servicios_contenedor_s article p a {
+    text-decoration: none;
+    text-align: center;
+    background-color: #023E73;
+    color: #eeeeee;
+    border: 2px solid #1d1d1d;
+}
+.nuestros_servicios_contenedor_s article h3 {
+    margin: 0rem;
+    padding: 1rem;
+    text-align: center;
+}
+.nuestros_servicios_contenedor_s article {
+    padding: 0rem 0rem 1rem;
+    background-color: hsla(0, 0%, 93%, 0.50);
+}
+
+
+/* Maquetado de los elementos de enlaces a otras paginas con grid*/
+.otras_paginas_contenedor_s {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(15rem,1fr)); 
+}
+
+/* Alineamiento interno de enlaces a otras paginas*/
+.otras_paginas_s {
+    padding: 2rem;
+}
+.otras_paginas_s h2 {
+    margin: 0rem;
+    text-align: center;
+    padding: 0rem 1rem 1rem;
+}
+.otras_paginas_contenedor_s article {
+    text-align: center;
+}
+.enlaces_contenedor_i article h3 {
+    margin: 0rem;
+    padding: 0rem 1rem;
+}
+.enlaces_contenedor_i article p {
+    margin: 0rem;
+    padding: 1rem;
+}
+
+/* PAGINA DE PORTAFOLIO */
+/* Fondo del sitio web */
+.portafolio {
+    background-color: #eeeeee;
+    background-image: url("/assets/pattern/pattern.svg");
+    background-repeat: repeat;
+    background-size: 2rem 2rem;
+}
+/* Header */
+.portafolio_me_a {
+    text-decoration-line: underline overline;
+}
+/* ESTILOS DEL CONTENIDO */
+/* Estilos generales */
+.contenido_p_portafolio {
+    max-width: 2000px; 
+    min-width: 300px;  
+}
+/* Para los botones */
+.contenido_p_portafolio button{
+    border-style: none;
+    background-color: #023E73;
+    color: #eeeeee;
+    border: 2px solid #1d1d1d;
+}
+/* Maquetado de trabajos realizados - contenedor usando grid */
+.trabajos_realizados_contenedor_p {
+    padding: 0rem 1rem 2rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2,1fr);
+}
+.trabajos_realizados_contenedor_p article img{
+    width: 100%;
+}
+/* Background y bordes */
+.trabajos_realizados_contenedor_p article {
+    padding: 1rem;
+    background-color: #eeeeee;
+    border: 1rem ridge #1d1d1d;
+
+}
+/* Acomodando los elementos internos de trabajos realizados */
+.trabajos_realizados_contenedor_p article h2 {
+    margin: 0rem;
+    padding: 1rem 0rem;
+}
+.trabajos_realizados_p h1 {
+    margin: 0rem;
+    padding: 2rem 0rem;
+    text-align: center;
+}
+.descripcion_trabajos_p {
+    margin: 0rem;
+    padding: 2rem 1rem 2rem;
+    text-align: center;
+}
+.trabajos_realizados_contenedor_p article a {
+    text-decoration: none;
+}
+.trabajos_realizados_contenedor_p article form {
+    text-align: center;
+}
+
+/* PAGINA DE DEMOS */
+/* Fondo del sitio web */
+.demos {
+    background-color: #eeeeee;
+    background-image: url("/assets/pattern/pattern.svg");
+    background-repeat: repeat;
+    background-size: 2rem 2rem;
+}
+/* Header */
+.demos_me_a {
+    text-decoration-line: underline overline;
+}
+/* ESTILOS DEL CONTENIDO */
+/* Estilos generales */
+.contenido_p_demos {
+    max-width: 2000px; 
+    min-width: 300px;  
+}
+/* Para los botones */
+.contenido_p_demos button{
+    border-style: none;
+    background-color: #023E73;
+    color: #eeeeee;
+    border: 2px solid #1d1d1d;
+}
+/* Maquetado de trabajos realizados - contenedor usando grid */
+.demos_realizados_contenedor_p {
+    padding: 0rem 1rem 2rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2,1fr);
+}
+.demos_realizados_contenedor_p article img{
+    width: 100%;
+}
+/* Background y bordes */
+.demos_realizados_contenedor_p article {
+    padding: 1rem;
+    background-color: #eeeeee;
+    border: 1rem ridge #1d1d1d;
+
+}
+/* Acomodando los elementos internos de trabajos realizados */
+.demos_realizados_contenedor_p article h2 {
+    margin: 0rem;
+    padding: 1rem 0rem;
+}
+.demos_realizados_p h1 {
+    margin: 0rem;
+    padding: 2rem 0rem;
+    text-align: center;
+}
+.descripcion_demos_p {
+    margin: 0rem;
+    padding: 2rem 1rem 2rem;
+    text-align: center;
+}
+.descripcion_demos_p a {
+    text-decoration: none;
+}
+.demos_realizados_contenedor_p article a {
+    text-decoration: none;
+}
+.demos_realizados_contenedor_p article form {
+    text-align: center;
+}
+
+/* PAGINA DE BLOG */
+/* Fondo del sitio web */
+.blog {
+    background-color: #eeeeee;
+    background-image: url("/assets/pattern/pattern.svg");
+    background-repeat: repeat;
+    background-size: 2rem 2rem;
+}
+/* Header */
+.blog_me_a {
+    text-decoration-line: underline overline;
+}
+/* ESTILOS DEL CONTENIDO */
+/* Estilos generales */
+.contenido_p_blog {
+    max-width: 2000px; 
+    min-width: 300px;  
+}
+/* Para los botones */
+.contenido_p_blog button{
+    border-style: none;
+    background-color: #023E73;
+    color: #eeeeee;
+    border: 2px solid #1d1d1d;
+}
+/* Maquetado de articulos - contenedor usando grid */
+.seccion_articulos_contenedor_b {
+    padding: 0rem 1rem 2rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2,1fr);
+}
+.seccion_articulos_contenedor_b article img{
+    width: 100%;
+}
+/* Background y bordes */
+.seccion_articulos_contenedor_b article {
+    padding: 1rem;
+    background-color: #eeeeee;
+    border: 1rem ridge #1d1d1d;
+
+}
+/* Acomodando los elementos internos de los articulos */
+.seccion_articulos_contenedor_b article h2 {
+    margin: 0rem;
+    padding: 1rem 0rem;
+}
+.seccion_articulos_b h1 {
+    margin: 0rem;
+    padding: 2rem 0rem;
+    text-align: center;
+}
+.descripcion_nuestros_articulos_b {
+    margin: 0rem;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+.seccion_articulos_contenedor_b article a {
+    text-decoration: none;
+}
+.seccion_articulos_contenedor_b article form {
+    text-align: center;
+}
+.seccion_articulos_contenedor_b  p {
+    margin: 0rem;
+    padding: 0rem 0rem 1rem;
+}
+
+/* PAGINA DE LOS ARTICULOS */
+/* Fondo del sitio web */
+.aticulo_estandar {
+    background-color: #eeeeee;
+    background-image: url("/assets/pattern/pattern.svg");
+    background-repeat: repeat;
+    background-size: 2rem 2rem;
+}
+/* ESTILOS DEL CONTENIDO */
+/* Estilos generales */
+.contenido_p_articulo_estandar {
+    max-width: 2000px; 
+    min-width: 300px;
+}
+.articulo_mismo_ae a {
+    text-decoration: none;
+    color: #023E73;
+}
+.articulo_mismo_ae ol {
+    list-style: none;
+}
+/* Background y bordes */
+.contenido_articulo_ae {
+    padding: 1rem;
+    background-color: #eeeeee;
+    border: 1rem ridge #1d1d1d;
+}
+/* Acomodando los elementos internos */
+.articulo_mismo_ae {
+    margin: auto;
+    padding: 2rem;
+    width: 60%;
+}
+.articulo_mismo_ae h2, .articulo_mismo_ae h3, .articulo_mismo_ae h4 {
+    margin: 0rem;
+    padding: 1rem 0rem 0rem;
+}
+.articulo_mismo_ae h1 {
+    margin: 0rem;
+    padding: 1rem 0rem;
+    text-align: center;
+}
+.articulo_mismo_ae p {
+    margin: 0rem;
+    padding: 1rem 0rem 0rem;
+    text-align: justify;
+}
+.articulo_mismo_ae img {
+    padding: 1rem 0rem 0rem;
+    width: 100%;
+}
+.articulo_mismo_ae .desert_ae {
+    padding-bottom: 1rem;
+}
+.contenido_encabezado_ae {
+    text-decoration-line: underline;
+}
+.contenido_enumerado_ae {
+    margin: 0;
+    padding: 0;
+}
+.articulo_mismo_ae .titulo_imagen_articulo_ae {
+    padding: 0rem;
+}
+/* Ajustando los tamaños de fuente */
+.articulo_mismo_ae h1 {
+    font-size: 3em;
+}
+.articulo_mismo_ae h2 {
+    font-size: 2.5em;
+}
+.articulo_mismo_ae h3 {
+    font-size: 2em;
+}
+.articulo_mismo_ae h4 {
+    font-size: 1.5em;
+}
+.articulo_mismo_ae p {
+    font-size: 1.5em;
+}
+.articulo_mismo_ae ol, .articulo_mismo_ae dl {
+    font-size: 24px;
+}
+.articulo_mismo_ae .titulo_imagen_articulo_ae {
+    font-size: 1em;
+}
+
+/* PÁGINA DEL ERROR 404*/
+/* Fondo del sitio web */
+.error_404 {
+    background-color: #eeeeee;
+    background-image: url("/assets/pattern/pattern.svg");
+    background-repeat: repeat;
+    background-size: 2rem 2rem;
+}
+/* ESTILOS DEL CONTENIDO */
+/* Estilos generales */
+.contenido_p_404 {
+    max-width: 2000px; 
+    min-width: 300px;  
+}
+/* Acomodando los elementos internos */
+.mensaje_error_404 {
+    padding: 2rem;
+    height: 100vh;
+}
+.mensaje_error_404 h1, .mensaje_error_404 h2, .mensaje_error_404 ul, .mensaje_error_404 p {
+    margin: 0rem;
+    padding: 0rem 0rem 1rem;
+}
+.mensaje_error_404 li {
+    margin-left: 3rem;
+    padding: 0rem 0rem 1rem;
+}
+
+/* PÁGINA DE POLÍTICAS DE PRIVACIDAD*/
+/* Fondo del sitio web */
+.politica_de_privacidad {
+    background-color: #eeeeee;
+    background-image: url("/assets/pattern/pattern.svg");
+    background-repeat: repeat;
+    background-size: 2rem 2rem;
+}
+/* ESTILOS DEL CONTENIDO */
+/* Estilos generales */
+.contenido_p_politica_privacidad {
+    max-width: 2000px; 
+    min-width: 300px;  
+}
+/* Acomodando los elementos internos */
+.texto_politica_privacidad {
+    padding: 2rem;
+}
+.texto_politica_privacidad h1, .texto_politica_privacidad h2, .texto_politica_privacidad ul, .texto_politica_privacidad p {
+    margin: 0rem;
+    padding: 0rem 0rem 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos para laptop, notebook o tablet sobretodo */
+@media screen and (max-width: 992px) {
+    /* PAGINA DE INICIO */
+    .menu_principal {
+        grid-template-columns: 1fr 2fr;
+    }
+    
+    .llamada_accion_1, .mini_bio_i {
+        padding:0rem;
+        width: 100%;
+        height: 55vw;
+        grid-template-rows: repeat(9, 1fr);
+        grid-template-columns: 3fr 1fr;
+    }
+    .mini_bio_i {
+        grid-template-columns: 1fr 3fr;
+    }
+
+    /* PAGINA DE QUIENES SOMOS */
+    .menu_estandar {
+        grid-template-columns: 1fr 2fr
+    }
+
+    .porque_lo_hacemos {
+        padding:0rem;
+        width: 100%;
+        height: 55vw;
+        grid-template-rows: repeat(9, 1fr);
+        grid-template-columns: 3fr 1fr;
+    }
+
+    /* PAGINA DE SERVICIOS */
+    .nuestros_servicios_contenedor_s {
+        display: grid;
+        grid-gap: 2rem;
+        grid-template-columns: repeat(2, minmax(10rem,1fr)); 
+    }
+    /* PAGINA DE ARTICULOS */
+    .articulo_mismo_ae {
+        margin: auto;
+        padding: 2rem;
+        width: 75%;
+    }
+    
+}
+
+/* Estilos para celular sobretodo */
+@media screen and (max-width: 576px) {
+    /* PAGINA DE INICIO */
+    .img_inicial {
+        overflow-y: auto;
+        background-image: url("/assets/images/home/inicio_principal_bg_cel.webp");
+    }
+    .menu_principal {
+        background-color: hsla(0, 0%, 11%, 0.85);
+        grid-auto-flow: row;
+        grid-template-columns: 1fr;
+    }
+    .logo_m {
+        justify-self: center;
+    }
+    .menu_principal div {
+        padding: 0em;
+    }
+    .pag_sec_m div{
+        text-align: center;
+    }
+
+    .problemas_contenedor_i, .enlaces_contenedor_i {
+        grid-auto-flow: row;
+        grid-template-columns: 1fr;
+    }
+
+    .llamada_accion_1, .mini_bio_i {
+        padding: 1rem;
+        width: calc(100% - 2rem);
+        height: auto;
+        display: block;
+    }
+    .llamada_accion_1 {
+        background-image: url("/assets/images/home/grupo_cel.webp");
+    }
+    .mini_bio_i {
+        background-image: url("/assets/images/home/inicio_bio_cel.webp");
+    }
+
+    /* CONTACTO (EN EL FOOTER) */
+    /* Maquetando contactos y redes sociales con grid */
+    .contactanos_redes_footer {
+        padding: 0rem 0rem 2rem;
+        display: grid;
+        gap: 2rem;
+        grid-auto-rows: row;
+        grid-template-columns: 1fr;
+    }
+
+    /* PAGINA DE QUIENES SOMOS */
+    .menu_estandar {
+        grid-auto-flow: row;
+        grid-template-columns: 1fr;
+    }
+    .logo_me {
+        justify-self: center;
+    }
+    .pag_sec_me div{
+        text-align: center;
+    }
+
+    .porque_lo_hacemos {
+        padding: 1rem;
+        width: calc(100% - 2rem);
+        height: auto;
+        display: block;
+        background-image: url("/assets/images/quienes_somos_porque_cel.webp");
+    }
+    
+    /* PAGINA DE SERVICIOS */
+    .problemas_contenedor_i, .otras_paginas_contenedor_s {
+        grid-auto-flow: row;
+        grid-template-columns: 1fr;
+    }
+    .nuestros_servicios_s {
+        padding: 1rem;
+        width: calc(100% - 4rem);
+        height: auto;
+        background-image: none;
+        background-color: #eeeeee;
+        border: 1rem ridge #1d1d1d; 
+    }
+    .nuestros_servicios_contenedor_s {
+        display: block;
+    }
+    
+    .nuestros_servicios_contenedor_s article, .subtitulo_servicios_s {
+        background-color: transparent;
+        width: auto;
+        margin: 0rem 0rem 1.5rem;
+    }
+    /* Espacios */
+    .subtitulo_servicios_s h2 {
+        padding: 0rem;
+    }
+
+    /* PAGINA DE PORTAFOLIO */
+    .trabajos_realizados_contenedor_p {
+        padding: 2rem 1rem;
+        display: grid;
+        gap: 1rem;
+        grid-auto-flow: row;
+        grid-template-columns: 1fr;
+    }
+
+    /* PAGINA DE DEMOS*/
+    .demos_realizados_contenedor_p {
+        padding: 2rem 1rem;
+        display: grid;
+        gap: 1rem;
+        grid-auto-flow: row;
+        grid-template-columns: 1fr;
+    }
+
+    /* PAGINA DEL BLOG */
+    .seccion_articulos_contenedor_b {
+        padding: 0rem 1rem 2rem;
+        display: grid;
+        gap: 1rem;
+        grid-auto-flow: row;
+        grid-template-columns: 1fr;
+    }
+    /* PAGINA DE ARTICULOS */
+    .articulo_mismo_ae {
+        margin: 0rem;
+        padding: 2rem;
+        width: auto;
+    }
+}
+

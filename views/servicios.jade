@@ -1,0 +1,76 @@
+extends layouts/layout-page1.jade
+block content
+    main.contenido_p_servicios
+        .problemas_s
+            //- titulo llamativo
+            h1 ¿Necesita presencia en la web?
+            //- problemas del cliente
+            section.problemas_cliente_s
+                h2 ¿Te identificas con alguno de estos casos?
+                .problema_cliente_contenedor_s
+                    //- problema 1
+                    article.problema_1_s
+                        h3 Quiero empezar en el mundo de la web para hacer el proyecto que tengo en mente.
+                    //- problema 2
+                    article.problema_2_s
+                        h3 Hay demasiadas opciones y no sé cual es la mejor para el proyecto.
+                    //- problema 3
+                    article.problema_3_s
+                        h3 Tengo problemas con mi sitio web y quiero que refleje la personalidad del proyecto.
+                    //- problema 4
+                    article.problema_4_s
+                        h3 Quiero funcionalidades o características que ayuden a mis clientes y así tener más personas interesadas en mis servicios o productos.
+                form(action='#')
+                    button(type='submit') Sí, me identifico
+        //- ¿Que hacemos? o nuestros servicios.
+        section.nuestros_servicios_s
+            .subtitulo_servicios_s
+                h2 NUESTROS SERVICIOS
+            .nuestros_servicios_contenedor_s
+                article.servicios_1
+                    h3 Optimización de sitios web.
+                    p Mejoramos tus páginas web para que tengan una mejor experiencia de usuario e interfaz.(UX/UI)
+                    p
+                        a(href='https://api.whatsapp.com/send?phone=51940826034&text=Hola,%20estoy%20interesado(a)%20en:%20%20Optimizaci%C3%B3n%20de%20sitios%20web.', target='_blank', rel='noopener noreferrer') Quiero Optimización
+                article.servicios_2
+                    h3 Diseño Web.
+                    p Planificamos, diseñamos y creamos interfaces digitales para que tu sitio web comunique tu mensaje.
+                    p
+                        a(href='https://api.whatsapp.com/send?phone=51940826034&text=Hola,%20estoy%20interesado(a)%20en:%20Dise%C3%B1o%20Web.', target='_blank', rel='noopener noreferrer') Quiero Diseño web
+                article.servicios_3
+                    h3 Desarrollo web mediante CMS.
+                    p Desarrollamos tu sitio web mediante un CMS (sistema de gestión de contenidos) principalmente con WordPress.org. Se recomienda mayormente para proyectos pequeños a medianos con la posibilidad de que usted gestione su propio contenido.
+                    p
+                        a(href='https://api.whatsapp.com/send?phone=51940826034&text=Hola,%20estoy%20interesado(a)%20en:%20%20Desarrollo%20web%20mediante%20CMS.', target='_blank', rel='noopener noreferrer') Quiero Desarrollo con un CMS
+                article.servicios_4
+                    h3 Desarrollo web mediante programación con código.
+                    p Construiremos tu sitio web mediante el uso de diferentes lenguajes, principalmente HTML, CSS, JavaScript y Node.js. Se recomienda para proyectos más complejos o si requieren más personalización.
+                    p
+                        a(href='https://api.whatsapp.com/send?phone=51940826034&text=Hola,%20estoy%20interesado(a)%20en:%20%20Desarrollo%20web%20mediante%20programaci%C3%B3n%20con%20c%C3%B3digo.', target='_blank', rel='noopener noreferrer') Quiero Desarrollo mediante programación
+                article.servicios_5
+                    h3 Tiendas online o e-commerce.
+                    p Diseñaremos y construiremos un sistema de compra y venta de productos y servicios en su sitio web.
+                    p
+                        a(href='https://api.whatsapp.com/send?phone=51940826034&text=Hola,%20estoy%20interesado(a)%20en:%20%20Tiendas%20online%20o%20e-commerce.', target='_blank', rel='noopener noreferrer') Quiero un e-commerce
+                article.servicios_6
+                    h3 Servicios SEO y SEM.
+                    p SEO: Crearemos o mejoraremos tu contenido para que los usuarios interesados encuentren tus servicios y/o productos.
+                    p SEM: Realizaremos publicidad con anuncios pagos en los buscadores.
+                    p
+                        a(href='https://api.whatsapp.com/send?phone=51940826034&text=Hola,%20estoy%20interesado(a)%20en:%20Servicios%20SEO%20y%20SEM.', target='_blank', rel='noopener noreferrer') Quiero SEO y/o SEM
+        //- Enlaces a las otras páginas 
+        section.otras_paginas_s
+            h2 ¿Aun no está convencido?
+            .otras_paginas_contenedor_s
+                article.portafolio_s
+                    h3 PORTAFOLIO
+                    p Échale un vistazo a nuestros últimos trabajos.
+                    form(action='#')
+                        button(type='submit') Quiero ver sus trabajos
+                article.blog_s
+                    h3 BLOG
+                    p Mayormente subiremos ejemplos y consejos prácticos para proyectos en la web.
+                    form(action='#')
+                        button(type='submit') Leer los artículos
+
+

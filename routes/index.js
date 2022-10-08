@@ -21,4 +21,9 @@ router.get('/portafolio', function(req, res, next) {
   res.render('portafolio', { title: 'PORTAFOLIO' });
 });
 
+/* GET blog page (blog.jade). */
+router.get('/blog', function(req, res, next) {
+  res.render('blog', { title: 'BLOG' });
+});
+
 module.exports = router;

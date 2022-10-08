@@ -17,21 +17,6 @@ html(lang="es")
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-HTMX22EME0');
-        //- Rich Snippets
-        script(type='application/ld+json').
-            {
-            "@context": "https://schema.org",
-            "@type": "Corporation",
-            "name": "DUDUDU",
-            "alternateName": "DUDUDU DESARROLLO WEB",
-            "url": "https://dududu.groupcusco.com/",
-            "logo": "https://dududu.groupcusco.com/assets/logo/Logo_DUDUDU_web_main_v1.webp",
-            "sameAs": [
-            "https://www.facebook.com/DUDUDUWEB",
-            "https://www.instagram.com/dududuweb/",
-            "https://www.linkedin.com/company/dududu-desarrollo-web/"
-            ]
-            }
         //- Hotjar Tracking Code for https://dududu.groupcusco.com/
         script.
             (function(h,o,t,j,a,r){
@@ -43,44 +28,38 @@ html(lang="es")
             a.appendChild(r);
             })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
         title= title
-        meta(name='description', content='Le ayudamos a crear un sitio web con un estilo propio para destacar en el mercado y cumplir con los objetivos que necesita alcanzar.')
-        meta(name='keywords', content='DUDUDU, desarrollo web, diseño web, sitio web')
-        meta(name='author', content='DUDUDU')
-        meta(name='copyright', content='DUDUDU')
-    body.inicio 
-        //- La cabecera con una imagen de fondo
-        header.img_inicial
-            nav.menu_principal
-                .logo_m
-                    a(href="/")
-                        img(src="/assets/brand/Logo_DUDUDU_blanco.webp")
-                .pag_sec_m
-                    .quienes_somos_m
-                        a(href="#") QUIENES SOMOS
-                    .servicios_m
-                        a(href="#") SERVICIOS
-                    .portafolio_m
-                        a(href="#") PORTAFOLIO
-                    .demos_m
-                        a(href="#") DEMOS
-                    .blog_m
-                        a(href="#") BLOG
-            abbr(title='Hola, en que te podemos ayudar :)')
-                a.link_flotante_wp(href='https://api.whatsapp.com/send?phone=940826034&text=Hola,%20vengo%20de%20su%20sitio%20web.', target='_blank', rel='noopener noreferrer')
-                    i.fa-brands.fa-whatsapp.fa-3x
+        block metatag
+    body.quienes_somos
+        //- La cabecera de las paginas secundarias
+        header.cabecera_estandar
+            nav.menu_estandar
+                .logo_me
+                    a(href='/')
+                        img(src='/assets/brand/Logo_DUDUDU_blanco.webp', alt='Logo DUDUDU')
+                .pag_sec_me
+                    .quienes_somos_me_a
+                        a(href='about-us') QUIENES SOMOS
+                    .servicios_me
+                        a(href='services') SERVICIOS
+                    .portafolio_me
+                        a(href='portafolio') PORTAFOLIO
+                    .demos_me
+                        a(href='demos') DEMOS
+                    .blog_me
+                        a(href='blog/') BLOG
         block content
         //- Pie de pagina 
         footer 
             //- Contactos y redes sociales en el footer
             aside.contactanos_redes_footer#contactanos_i 
                 .contactanos_footer
-                    p Contáctanos directamente:
+                    p Contáctenos directamente:
                     br
                     p
                         span Celular:
                         a(href="tel:+51940826034") 940826034
                     p 
-                        span WhatasApp: 
+                        span WhatsApp: 
                         a(href="https://api.whatsapp.com/send?phone=51940826034&text=Hola,%20quisiera%20recibir%20m%C3%A1s%20informaci%C3%B3n%20de:%20",target="_blank",rel="noopener noreferrer") 940826034
                     p 
                         span Correo: 

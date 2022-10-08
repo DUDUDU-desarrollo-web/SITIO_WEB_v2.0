@@ -32,6 +32,7 @@ html(lang="es")
     body.quienes_somos
         //- La cabecera de las paginas secundarias
         //- Corregir y automatizar los menus en los layouts.
+        //- añadir id a las clases (.quienes_somos_me_a, .servicios_me, .portafolio_me ... ) para llamarlos en el js.
         header.cabecera_estandar
             nav.menu_estandar
                 .logo_me
@@ -44,8 +45,6 @@ html(lang="es")
                         a(href='services') SERVICIOS
                     .portafolio_me
                         a(href='portafolio') PORTAFOLIO
-                    .demos_me
-                        a(href='demos') DEMOS
                     .blog_me
                         a(href='blog/') BLOG
             abbr(title='Hola, en que te podemos ayudar :)')
@@ -83,5 +82,9 @@ html(lang="es")
                 a(href="#") Política de privacidad
             br
             p © 2022 Todos los derechos reservados| DUDUDU 
+        //- Menu, página actual
+        script.
+                if (document.title == 'QUIENES SOMOS') {
 
+                }
 

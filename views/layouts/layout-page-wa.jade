@@ -31,22 +31,20 @@ html(lang="es")
         block metatag
     body.quienes_somos
         //- La cabecera de las paginas secundarias
-        //- Corregir y automatizar los menus en los layouts.
-        //- añadir id a las clases (.quienes_somos_me_a, .servicios_me, .portafolio_me ... ) para llamarlos en el js.
         header.cabecera_estandar
             nav.menu_estandar
                 .logo_me
                     a(href='/')
                         img(src='/assets/brand/Logo_DUDUDU_blanco.webp', alt='Logo DUDUDU')
                 .pag_sec_me
-                    .quienes_somos_me_a
-                        a(href='about-us') QUIENES SOMOS
-                    .servicios_me
-                        a(href='services') SERVICIOS
-                    .portafolio_me
-                        a(href='portafolio') PORTAFOLIO
+                    .quienes_somos_me#quienes_somos_me
+                        a(href='/quienes-somos') QUIENES SOMOS
+                    .servicios_me#servicios_me
+                        a(href='/servicios') SERVICIOS
+                    .portafolio_me#portafolio_me
+                        a(href='/portafolio') PORTAFOLIO
                     .blog_me
-                        a(href='blog/') BLOG
+                        a(href='/blog') BLOG
             abbr(title='Hola, en que te podemos ayudar :)')
                 a.link_flotante_wp(href='https://api.whatsapp.com/send?phone=940826034&text=Hola,%20vengo%20de%20su%20sitio%20web.', target='_blank', rel='noopener noreferrer')
                     i.fa-brands.fa-whatsapp.fa-3x
@@ -84,7 +82,15 @@ html(lang="es")
             p © 2022 Todos los derechos reservados| DUDUDU 
         //- Menu, página actual
         script.
-                if (document.title == 'QUIENES SOMOS') {
+                const quienesSomosMe = document.getElementById("quienes_somos_me");
+                const serviciosMe = document.getElementById("servicios_me");
+                const portafolioMe = document.getElementById("portafolio_me");
 
+                if (document.title == 'QUIENES SOMOS') {
+                    quienesSomosMe.classList.add("quienes_somos_me_a");
+                } else if (document.title == 'SERVICIOS') {
+                    serviciosMe.classList.add("servicios_me_a");
+                } else if (document.title == 'PORTAFOLIO') {
+                    portafolioMe.classList.add("portafolio_me_a");
                 }
 

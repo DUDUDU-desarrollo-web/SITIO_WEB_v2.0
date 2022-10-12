@@ -17,9 +17,11 @@ router.get('/servicios', function(req, res, next) {
 });
 
 /* GET portafolio page (portafolio.jade). */
+/*
 router.get('/portafolio', function(req, res, next) {
   res.render('portafolio', { title: 'PORTAFOLIO' });
 });
+*/
 
 /* GET blog page (blog.jade). */
 router.get('/blog', function(req, res, next) {

@@ -6,7 +6,7 @@
     PAGINA DE SERVICIOS
     PAGINA DE PORTAFOLIO 
     PAGINA DE BLOG
-    PAGINA DE LOS ARTICULOS
+    PAGINA DE LOS ARTÍCULOS
     PÁGINA DEL ERROR 404
 */
 
@@ -61,7 +61,7 @@
     align-self: center;
 }
 .quienes_somos_m, .servicios_m, .portafolio_m, .contacto_m, .blog_m, .demos_m {
-    text-align: right;
+    text-align: center;
 }
 
 /* WhatsApp Flotante */

@@ -7,10 +7,44 @@ block metatag
 block content
     main.contenido_p_portafolio
         //- Trabajos Realizados
+        //-Poner las imágenes en el sistema de archivos (en folder) y en la base de datos la ruta a esa imagen.
         section.trabajos_realizados_p
             h1 NUESTROS TRABAJOS
             p.descripcion_trabajos_p Estos son nuestros trabajos que hicimos y se siguen actualizando para que el sitio web tenga "vida".
             .trabajos_realizados_contenedor_p
+                - for (var i = 0; i < trabajos.length; i++)
+                    article.trabajo
+                        a(href='#{trabajos[i].url}', target='_blank', rel='noopener noreferrer')
+                            picture
+                                source(media='(max-width: 576px)', srcset='#{trabajos[i].portadaCel}')
+                                source(media='(min-width: 577px)', srcset='#{trabajos[i].portadaCompu}')
+                                img(src='#{trabajos[i].portadaCompu}', alt='#{trabajos[i].titulo}')
+                        a(href='#{trabajos[i].url}', target='_blank', rel='noopener noreferrer')
+                            h2= trabajos[i].titulo
+                        p
+                            span Categoría:
+                            |   #{trabajos[i].categoria}
+                        p
+                            span Descripción:
+                            |   #{trabajos[i].descripcion}
+                        p
+                            span Detalles:
+                            |   #{trabajos[i].detalles}
+                        form(action='#{trabajos[i].url}', target='_blank', rel='noopener noreferrer')
+                            button(type='submit') Ir a su sitio web
+
+
+
+
+
+
+
+
+
+
+
+
+
                 //- Trabajo 2
                 article.trabajo_2
                     a(href='/')

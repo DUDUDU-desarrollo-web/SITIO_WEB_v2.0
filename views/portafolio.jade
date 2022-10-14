@@ -7,12 +7,11 @@ block metatag
 block content
     main.contenido_p_portafolio
         //- Trabajos Realizados
-        //-Poner las imágenes en el sistema de archivos (en folder) y en la base de datos la ruta a esa imagen.
         section.trabajos_realizados_p
             h1 NUESTROS TRABAJOS
             p.descripcion_trabajos_p Estos son nuestros trabajos que hicimos y se siguen actualizando para que el sitio web tenga "vida".
             .trabajos_realizados_contenedor_p
-                - for (var i = 0; i < trabajos.length; i++)
+                - for (var i = trabajos.length - 1; i >= 0; i--)
                     article.trabajo
                         a(href='#{trabajos[i].url}', target='_blank', rel='noopener noreferrer')
                             picture

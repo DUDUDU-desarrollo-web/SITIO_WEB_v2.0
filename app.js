@@ -7,6 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var portafolioRouter = require('./routes/portafolio');
+var blogRouter = require('./routes/blog/index');
 
 var app = express();
 //Serve favicon
@@ -25,6 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/portafolio', portafolioRouter);
+app.use('/blog/', blogRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -42,7 +44,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-//Favicons
+//Favicon
 app.use(favicon(path.join(__dirname, 'public','favicon.ico')));
 
 /* app.listen (30000, ()=>{

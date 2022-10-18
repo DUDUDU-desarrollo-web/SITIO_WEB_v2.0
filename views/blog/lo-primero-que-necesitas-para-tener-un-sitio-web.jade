@@ -1,7 +1,47 @@
 extends ../layouts/layout-post.jade
+block richSnippets
 block metatag
+    meta(name='description', content='Somos una empresa que ayuda a conectar empresas, instituciones y personas con el mundo digital, para que logren sus objetivos.')
+    meta(name='keywords', content='DUDUDU, MISIÓN, VISIÓN')
+    meta(name='author', content='DUDUDU')
+    meta(name='copyright', content='DUDUDU')
 block content
-    main 
-        h1= post[0].titulo
+    main.contenido_p_articulo_estandar
+        section.articulo_mismo_ae
+            h1 Lo primero que necesitas para tener un sitio web
+            p.desert_ae Con el acceso al internet se puede escuchar muchos términos y conceptos, pero puede ser confuso darle un contexto a todo ello, en este articulo te daré mi opinión para tener un sitio web.
+            .contenido_articulo_ae
+                p.contenido_encabezado_ae CONTENIDO
+                ol.contenido_enumerado_ae
+                    li
+                        a(href='lo-primero-que-necesitas-para-tener-un-sitio-web#lo-primero') 1. Lo primero
+                    li
+                        a(href='lo-primero-que-necesitas-para-tener-un-sitio-web#lo-segundo') 2. Lo segundo
+                        ol
+                            li
+                                a(href='lo-primero-que-necesitas-para-tener-un-sitio-web#cms-principalmente') 2.1. Para CMS principalmente.
+                                ol
+                                    li
+                                        a(href='lo-primero-que-necesitas-para-tener-un-sitio-web#dominio') 2.1.1. Un dominio.
+                                    li
+                                        a(href='lo-primero-que-necesitas-para-tener-un-sitio-web#hosting') 2.1.2. El hosting propiamente dicho.
+                                    li
+                                        a(href='lo-primero-que-necesitas-para-tener-un-sitio-web#instalar-cms') 2.1.3. La opción de instalar el CMS que necesite.
+                                    li
+                                        a(href='lo-primero-que-necesitas-para-tener-un-sitio-web#ssl') 2.1.4. El certificado SSL.
+                                    li
+                                        a(href='lo-primero-que-necesitas-para-tener-un-sitio-web#e-mail') 2.1.5. La opción de crear un correo institucional.
+                            li
+                                a(href='lo-primero-que-necesitas-para-tener-un-sitio-web#web-codigo') 2.2. Para sitios web creados con código desde cero principalmente.
+                                ol
+                                    li
+                                        a(href='lo-primero-que-necesitas-para-tener-un-sitio-web#ssh') 2.2.1. Una configuración avanzada de tu dominio con los servidores.
+                                    li
+                                        a(href='lo-primero-que-necesitas-para-tener-un-sitio-web#alamacenamiento') 2.2.2. Un espacio de almacenamiento y memoria RAM determinada.
+                                    li
+                                        a(href='lo-primero-que-necesitas-para-tener-un-sitio-web#opc-cms') 2.2.3. La opción de instalar un CMS.
+            h2#lo-primero 1. Lo primero
+            p Lo primero es saber para que lo quieres, sería mejor si se completa un briefing (es una serie de preguntas sobre la empresa) para el sitio web, y sería mucho mejor si se tiene un plan de marketing. Según a eso se va hacer el diseño y casi todo lo que falta.
+            
         
     

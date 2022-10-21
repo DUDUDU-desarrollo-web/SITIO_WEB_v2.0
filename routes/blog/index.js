@@ -4,13 +4,15 @@ var db = require('../../connection/connection-mysql');
 
 /* GET blog page (blog.jade). */
 router.get('/', function(req, res, next) {
-    res.render('blog/index', { title: 'BLOG' });
+  db.query("SELECT * FROM blog", function(err,datos){
+    console.log(datos);
+    res.render('blog/index', { title: 'BLOG',post: datos });
   });
+});
 
 /* GET 1er post (lo-primero-que-necesitas-para-tener-un-sitio-web.jade). */
 router.get('/lo-primero-que-necesitas-para-tener-un-sitio-web', function(req, res, next) {
   db.query("SELECT * FROM blog", function(err,datos){
-    console.log(datos);
     res.render('blog/lo-primero-que-necesitas-para-tener-un-sitio-web', { title: 'Lo primero que necesitas para tener un sitio web',post: datos });
   });
 });

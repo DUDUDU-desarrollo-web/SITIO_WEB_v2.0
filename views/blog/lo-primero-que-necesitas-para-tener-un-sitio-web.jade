@@ -1,15 +1,16 @@
 extends ../layouts/layout-post.jade
 block richSnippets
 block metatag
-    meta(name='description', content='Somos una empresa que ayuda a conectar empresas, instituciones y personas con el mundo digital, para que logren sus objetivos.')
-    meta(name='keywords', content='DUDUDU, MISIÓN, VISIÓN')
-    meta(name='author', content='DUDUDU')
-    meta(name='copyright', content='DUDUDU')
+    - const articulo = 0;
+    meta(name='description', content='#{post[articulo].resumenMetatag}')
+    meta(name='keywords', content='#{post[articulo].palabrasClave}')
+    meta(name='author', content='#{post[articulo].autor}')
+    meta(name='copyright', content='#{post[articulo].autor}')
 block content
     main.contenido_p_articulo_estandar
         section.articulo_mismo_ae
-            h1 Lo primero que necesitas para tener un sitio web
-            p.desert_ae Con el acceso al internet se puede escuchar muchos términos y conceptos, pero puede ser confuso darle un contexto a todo ello, en este articulo te daré mi opinión para tener un sitio web.
+            h1= post[articulo].titulo
+            p.desert_ae= post[articulo].resumenPagina
             .contenido_articulo_ae
                 p.contenido_encabezado_ae CONTENIDO
                 ol.contenido_enumerado_ae
@@ -64,6 +65,76 @@ block content
                 img(src='/assets/images/blog/lo-primero-que-necesitas-para-tener-un-sitio-web/empresas_hosting.webp', alt='Empresas con servicios de hosting')
             p.titulo_imagen_articulo_ae Ejemplos de empresas con servicio de hosting.
             p Lo que no siempre pero usualmente te ofrecen, dependiendo de la empresa que da el servicio, es:
-            
-        
-    
+            h4#dominio 2.1.1. Un dominio.
+            picture
+                source(media='(max-width: 576px)', srcset='/assets/images/blog/lo-primero-que-necesitas-para-tener-un-sitio-web/dominio_ejemplos_cel.webp')
+                source(media='(min-width: 577px)', srcset='/assets/images/blog/lo-primero-que-necesitas-para-tener-un-sitio-web/dominio_ejemplos.webp')
+                img(src='/assets/images/blog/lo-primero-que-necesitas-para-tener-un-sitio-web/dominio_ejemplos.webp', alt='Ejemplos de dominios')
+            p.titulo_imagen_articulo_ae Ejemplos de dominios.
+            p Es el nombre único del sitio web y sirve para que se pueda memorizar y/o se pueda encontrar fácilmente. Algunos son gratis dependiendo del TLD (Dominio de nivel superior) por ejemplo los ".com" (los que terminan en .com por ejemplo google.com) suelen ser gratis por el primer año, pero tienes que comprar su servicio de hosting. Hay otros que, aunque compres el servicio, tienes que pagar por el dominio. El costo del dominio es anual.
+            h4#hosting 2.1.2. El hosting propiamente dicho.
+            p Es el servicio que te da la empresa por usar sus servidores, que es una granja de servidores (varios equipos físicos que se encargan de contener y distribuir la información)
+            picture
+                source(media='(max-width: 576px)', srcset='/assets/images/blog/lo-primero-que-necesitas-para-tener-un-sitio-web/granja_servidores_cel.webp')
+                source(media='(min-width: 577px)', srcset='/assets/images/blog/lo-primero-que-necesitas-para-tener-un-sitio-web/granja_servidores.webp')
+                img(src='/assets/images/blog/lo-primero-que-necesitas-para-tener-un-sitio-web/granja_servidores.webp', alt='Granja de servidores')
+            p.titulo_imagen_articulo_ae Ejemplo de una parte de una granja de servidores.
+            p Los precios varían de acuerdo a la empresa de hosting, a sus planes de hosting y si los pagara mensualmente, cada 6 meses, anualmente o por dos años a más. Lo común es que se pague cada año. La empresa de hosting y sus planes de hosting que se escoge es de acuerdo a la necesidad del sitio web, como la velocidad de respuesta, el tamaño y la complejidad de la web.
+            h4#instalar-cms 2.1.3. La opción de instalar el CMS que necesite.
+            p Aquí es donde se instala el CMS, por ejemplo, WordPress. Se configura de manera fácil y está listo para crear su sitio web. Esto normalmente es gratuito.
+            h4#ssl 2.1.4. El certificado SSL.
+            p Es un certificado de seguridad, para que la conexión sea "seguro", de lo contrario la conexión será "no seguro". Al inicio el dominio se conecta con el protocolo "http", pero con el certificado SSL se conecta con el protocolo "https". Este certificado suele ser gratis.
+            picture
+                source(media='(max-width: 576px)', srcset='/assets/images/blog/lo-primero-que-necesitas-para-tener-un-sitio-web/http_vs_https_cel.webp')
+                source(media='(min-width: 577px)', srcset='/assets/images/blog/lo-primero-que-necesitas-para-tener-un-sitio-web/http_vs_https.webp')
+                img(src='/assets/images/blog/lo-primero-que-necesitas-para-tener-un-sitio-web/http_vs_https.webp', alt='Los protocolos http y https')
+            p.titulo_imagen_articulo_ae Los protocolos http y https.
+            h4#e-mail 2.1.5. La opción de crear un correo institucional.
+            p Por ejemplo, info@empresa.com, si usa esta opción solo estará activo mientras pague por el hosting. Esto es gratuito, pero si quiere más correos algunas empresas le cobran por los correos adicionales.
+            br
+            p Paralelamente se puede hacer el diseño de la web, una vez el estén de acuerdo con el diseño, se desarrolla la web en el CMS de acuerdo a las necesidades por el cual se ha hecho el sitio web.
+            p Es una buena opción sobre todo si es tu primer sitio web y si quieres una web corporativa o una tienda online pequeña a mediana. Aunque también se puede hacer una mediana a grande web, pero puede que tengas algunas limitantes si lo quieres personalizar.  Los precios pueden variar desde los 800 a 5000 soles fácilmente.
+            h3#web-codigo 2.2. Para sitios web creados con código desde cero principalmente.
+            p Si quieren funcionalidades complejas o que no existen, como los softwares como servicios (SaaS), videojuegos o aplicaciones.
+            picture
+                source(media='(max-width: 576px)', srcset='/assets/images/blog/lo-primero-que-necesitas-para-tener-un-sitio-web/html_css_js_cel.webp')
+                source(media='(min-width: 577px)', srcset='/assets/images/blog/lo-primero-que-necesitas-para-tener-un-sitio-web/html_css_js.webp')
+                img(src='/assets/images/blog/lo-primero-que-necesitas-para-tener-un-sitio-web/html_css_js.webp', alt='HTML, CSS y JavaScript')
+            p.titulo_imagen_articulo_ae Códigos de web: HTML, CSS y JavaScript.
+            p Son lenguajes para diferentes objetivos, aunque hay más lenguajes que se pueden utilizar:
+            dl
+                dt  HTML 
+                dd Significa Lenguaje de Marcado de Hipertexto en español, sirve para estructurar la página web, como por ejemplo definir los párrafos, el contenido principal, la cabecera, el pie de página, las tablas, enlaces, entre muchas otras.
+                dt  CSS 
+                dd Significa Hojas de Estilo en Cascada en español, sirve para darle la estética del diseño a la página web, como por ejemplo los colores del texto, el color del fondo o el patrón, la posición y la distribución del texto, entre otros.
+                dt  JavaScript 
+                dd Significa ... no, no es una abreviatura, ese es su nombre. Este si es un lenguaje de programación, sirve para darle funcionalidad a la página web, como por ejemplo que cambie de color un texto cuando haga clic o pase el mouse sobre el texto, que salga una alerta cuando haga doble clic o cambie el color de fondo, entre otras que pueden ser más complejas.
+            p Lo mejor en este caso es realizar primero el diseño y desarrollarlo con código. Como normalmente se realiza desde cero, demora en desarrollarse semanas, meses o hasta años.
+            p Una vez terminado el desarrollo y comprobado de que funciona como debe ser. Se busca un servicio de servidores virtuales compartidos o privados, como en las empresas de Linode, Amazon (AWS), Google (Google Cloud).
+            picture
+                source(media='(max-width: 576px)', srcset='/assets/images/blog/lo-primero-que-necesitas-para-tener-un-sitio-web/cloud_platform_cel.webp')
+                source(media='(min-width: 577px)', srcset='/assets/images/blog/lo-primero-que-necesitas-para-tener-un-sitio-web/cloud_platform.webp')
+                img(src='/assets/images/blog/lo-primero-que-necesitas-para-tener-un-sitio-web/cloud_platform.webp', alt='Plataformas de nubes')
+            p.titulo_imagen_articulo_ae Plataformas de nubes como Linode, AWS y Google Cloud.
+            p Paralelamente buscas un dominio, lo compras sin un hosting, solo el domino. Lo mas común es comprarlo en Namecheap y es muy fácil.
+            p Lo que estas empresas te ofrecen es ... normalmente:
+            h4#ssh 2.2.1. Una configuración avanzada de tu dominio con los servidores.
+            p Similar al SSL, pero con el protocolo SSH se puede usar comandos avanzados.
+            h4#alamacenamiento 2.2.2. Un espacio de almacenamiento y memoria RAM determinada.
+            p De acuerdo a los recursos que necesites, sobre todo. Lo cual lo puedes usar en teoría para lo que quieras.
+            h4#opc-cms 2.2.3. La opción de instalar un CMS.
+            p Al menos en Linode, incluso para jugar videojuegos como Minecraft y Counter-Strike en "tu propio servidor".
+            br
+            p Entonces lo subes al servidor que compraste el desarrollo del proyecto web y estará listo para estar operativo.
+            p Es una buena opción sobre todo si quieres hacer un Software como servicio en la web o una aplicación, también si ya tiene experiencia con otros sitios web y quiere hacer algo mucho más grande. Los precios pueden variar desde los 3000 soles a más.
+            br
+            p Esto fue una idea general de cómo se puede hacer un sitio web. Posteriormente se verá cosas más específicas y circunstanciales.
+            br
+            p
+                span Escrito por:
+                |  Daniel Cjuno.
+            p
+                span Fecha:
+                |  #{post[articulo].fecha}
+
+

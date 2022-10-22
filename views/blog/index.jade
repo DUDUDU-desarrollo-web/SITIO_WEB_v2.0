@@ -11,18 +11,19 @@ block content
             h1 NUESTROS ARTÍCULOS
             p.descripcion_nuestros_articulos_b Mayormente subiremos ejemplos y consejos prácticos para proyectos en la web.
             .seccion_articulos_contenedor_b
-                article.articulo_1
-                    a(href='#')
-                        picture
-                            source(media='(max-width: 576px)', srcset='/assets/images/blog/lo-primero-que-necesitas-para-tener-un-sitio-web/portada_1ro_mecesitas_sitio_web_cel.webp')
-                            source(media='(min-width: 577px)', srcset='/assets/images/blog/lo-primero-que-necesitas-para-tener-un-sitio-web/portada_1ro_mecesitas_sitio_web.webp')
-                            img(src='/assets/images/blog/lo-primero-que-necesitas-para-tener-un-sitio-web/portada_1ro_mecesitas_sitio_web.webp', alt='sitio web escritorio')
-                    a(href='#')
-                        h2= post[0].titulo
-                    p Con el acceso al internet se puede escuchar muchos términos y conceptos, pero puede ser confuso darle un contexto a todo ello, en este articulo te daré mi opinión para tener un sitio web.
-                    p
-                        span Fecha: 31/05/2022
-                    form(action='#')
-                        button(type='submit') Leer más
+                - for (var n = post.length - 1; n >= 0; n--)
+                    article.articulo
+                        a(href='/blog/#{post[n].ruta}')
+                            picture
+                                source(media='(max-width: 576px)', srcset='#{post[n].imgPortadaCel}')
+                                source(media='(min-width: 577px)', srcset='#{post[n].imgPortadaCompu}')
+                                img(src='#{post[n].imgPortadaCompu}', alt='#{post[n].titulo}')
+                        a(href='/blog/#{post[n].ruta}')
+                            h2= post[n].titulo
+                        p= post[n].resumenPagina
+                        p
+                            span Fecha: #{post[n].fecha}
+                        form(action='/blog/#{post[n].ruta}')
+                            button(type='submit') Leer más
 
 

@@ -396,7 +396,7 @@ footer p {
     grid-template-areas: "titulo blanco"
     "parrafo blanco";
 
-    background-image: url("/assets/images/quienes_somos_porque.webp");
+    background-image: url("/assets/images/about-us/quienes_somos_porque.webp");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -488,7 +488,7 @@ footer p {
 /* Alineamiento interno de Nuestros sevicios en servicios e imagenes de fondo*/
 .nuestros_servicios_s {
     padding: 2rem 2rem 2rem;
-    background-image: url("/assets/images/meet.webp");
+    background-image: url("/assets/images/services/meet.webp");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -1027,7 +1027,7 @@ footer p {
         width: calc(100% - 2rem);
         height: auto;
         display: block;
-        background-image: url("/assets/images/quienes_somos_porque_cel.webp");
+        background-image: url("/assets/images/about-us/quienes_somos_porque_cel.webp");
     }
     
     /* PAGINA DE SERVICIOS */

@@ -1,7 +1,32 @@
 extends ../layouts/layout-post.jade
 block richSnippets
+    script(type="application/ld+json").
+        {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://dududu.groupcusco.com/blog/lo-primero-que-necesitas-para-tener-un-sitio-web"
+          },
+          "headline": "Lo primero que necesitas para tener un sitio web",
+          "description": "Con el acceso al internet se puede escuchar muchos términos y conceptos, pero puede ser confuso darle un contexto a todo ello.",
+          "image": "",  
+          "author": {
+            "@type": "Person",
+            "name": "Daniel Cjuno"
+          },  
+          "publisher": {
+            "@type": "Organization",
+            "name": "DUDUDU",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://dududu.groupcusco.com/assets/brand/Logo_DUDUDU_web_main_v1.webp"
+            }
+          },
+          "datePublished": "2022-05-31"
+        }
 block metatag
-    - const articulo = 0;
+    - const articulo = 0;//Es el número de articulo en el array de la tabla de blog.
     meta(name='description', content='#{post[articulo].resumenMetatag}')
     meta(name='keywords', content='#{post[articulo].palabrasClave}')
     meta(name='author', content='#{post[articulo].autor}')

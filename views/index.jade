@@ -1,12 +1,15 @@
 extends layouts/layout-home.jade
+block metatag
+    meta(name='description', content='Le ayudamos a crear un sitio web con un estilo propio para destacar en el mercado y cumplir con los objetivos que necesita alcanzar.')
+    meta(name='keywords', content='DUDUDU, desarrollo web, diseño web, sitio web')
+    meta(name='author', content='DUDUDU')
+    meta(name='copyright', content='DUDUDU')
 block content
     main.contenido_p_inicio
-        //- poner los links con las rutas que corresponden.
-        //- crear un layout general de donde dependan las otras.
         section.llamada_accion_1
             h1 DISEÑO Y DESARROLLO WEB PARA EMPRESA, MYPE, INSTITUCIÓN Y MARCA PERSONAL
             p Le ayudamos a crear un sitio web con un estilo propio para destacar en el mercado y cumplir con los objetivos que necesita alcanzar.
-            form(action="#contactanos_i")
+            form(action="#contactanos")
                 button(type="submit") ¿Conversamos?
         section.problemas_cliente_i
             h2 ¿En tu emprendimiento o proyecto necesitas un sitio web y no sabes por donde empezar?
@@ -20,14 +23,14 @@ block content
                 article.problema_4_i
                     h3 ¿Quieres funcionalidades o características que ayuden a tus clientes y así tener más personas interesadas en tus servicios o productos?  
             br
-            form(action='#')
+            form(action='servicios')
                 button(type='submit') Sí, asi es
         //- Una pequeña presentación de DUDUDU en la página
         section.mini_bio_i
             h2 Hola, somos DUDUDU
             h3 y queremos ayudarte a digitalizar tus ideas en la web
             p Somos un equipo de trabajo dedicado a la tecnología digital, actualmente nos dedicamos a todo lo relacionado al desarrollo web. Creemos que con la ayuda de la tecnología se puede experimentar y hacer posible tus ideas ... crear cosas nuevas :)
-            form(action='#')
+            form(action='quienes-somos')
                 button(type='submit') Conoce más de nosotros
         //- Enlaces a las otras paginas
         section.enlaces_i
@@ -36,16 +39,16 @@ block content
                 article.servicios_i
                     h3 SERVICIOS
                     p ¿Te gustaría que trabajemos juntos? Así es como puedo ayudarte a hacer tus proyectos en la web.
-                    form(action='#')
+                    form(action='servicios')
                         button(type='submit') Me interesan sus servicios
                 article.portafolio_i
                     h3 PORTAFOLIO
                     p Échale un vistazo a nuestros últimos trabajos.
-                    form(action='#')
+                    form(action='portafolio')
                         button(type='submit') Quiero ver sus trabajos
                 article.blog_i
                     h3 BLOG
                     p Mayormente subiremos ejemplos y consejos prácticos para proyectos en la web.
-                    form(action='#')
+                    form(action='blog/')
                         button(type='submit') Leer los artículos
 

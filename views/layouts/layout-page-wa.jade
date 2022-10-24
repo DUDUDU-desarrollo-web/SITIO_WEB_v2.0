@@ -1,34 +1,5 @@
-doctype html
-html(lang="es")
-    head
-        meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible", content="IE=edge")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        //- Estilos
-        link(rel="stylesheet", href="/stylesheets/normalize.css")
-        link(rel="stylesheet", href="/stylesheets/style.css")
-        link(rel="stylesheet", href="/stylesheets/font_styles.css")
-        //- Iconos de fontawesome
-        script(src="https://kit.fontawesome.com/915df25ef0.js",crossorigin="anonymous")
-        //- Global site tag (gtag.js) - Google Analytics
-        script(async='', src='https://www.googletagmanager.com/gtag/js?id=G-HTMX22EME0')
-        script.
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-HTMX22EME0');
-        //- Hotjar Tracking Code for https://dududu.groupcusco.com/
-        script.
-            (function(h,o,t,j,a,r){
-            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-            h._hjSettings={hjid:3042596,hjsv:6};
-            a=o.getElementsByTagName('head')[0];
-            r=o.createElement('script');r.async=1;
-            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-            a.appendChild(r);
-            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-        title= title
-        block metatag
+extends layout-general.jade
+block body
     body.quienes_somos
         //- La cabecera de las paginas secundarias
         header.cabecera_estandar
@@ -49,37 +20,6 @@ html(lang="es")
                 a.link_flotante_wp(href='https://api.whatsapp.com/send?phone=940826034&text=Hola,%20vengo%20de%20su%20sitio%20web.', target='_blank', rel='noopener noreferrer')
                     i.fa-brands.fa-whatsapp.fa-3x
         block content
-        //- Pie de pagina 
-        footer 
-            //- Contactos y redes sociales en el footer
-            aside.contactanos_redes_footer#contactanos_i 
-                .contactanos_footer
-                    p Contáctenos directamente:
-                    br
-                    p
-                        span Celular:
-                        a(href="tel:+51940826034") 940826034
-                    p 
-                        span WhatsApp: 
-                        a(href="https://api.whatsapp.com/send?phone=51940826034&text=Hola,%20quisiera%20recibir%20m%C3%A1s%20informaci%C3%B3n%20de:%20",target="_blank",rel="noopener noreferrer") 940826034
-                    p 
-                        span Correo: 
-                        a(href="mailto:dududu.desarrollo.web@gmail.com") dududu.desarrollo.web@gmail.com
-                .redes_footer
-                    p Síguenos en nuestras redes sociales:
-                    .redes_fondo
-                        a(href="https://www.facebook.com/Dududu-Desarrollo-Web-102579459109612",target="_blank",rel="noopener noreferrer")
-                            i.fa-brands.fa-facebook-f
-                        a(href="https://www.instagram.com/dududuweb/",target="_blank",rel="noopener noreferrer")
-                            i.fa-brands.fa-instagram
-                        a(href="https://www.linkedin.com/company/dududu-desarrollo-web/",target="_blank",rel="noopener noreferrer")
-                            i.fa-brands.fa-linkedin-in
-                        a(href="https://www.tiktok.com/@dududu_desarrollo_web",target="_blank",rel="noopener noreferrer")
-                            i.fa-brands.fa-tiktok
-            p.link_footer_politica_privacidad
-                a(href="#") Política de privacidad
-            br
-            p © 2022 Todos los derechos reservados| DUDUDU 
         //- Menu, página actual
         script.
                 const quienesSomosMe = document.getElementById("quienes_somos_me");

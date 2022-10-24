@@ -1,0 +1,18 @@
+extends layouts/layout-page-no-wa.jade
+block metatag
+    meta(name="robots", content="noindex")
+    meta(name='author', content='DUDUDU')
+    meta(name='copyright', content='DUDUDU')
+block content
+    main.contenido_p_404
+        //- Mensaje de error 404
+        section.mensaje_error_404
+            h1 La pagina que buscaba no se encontró (error 404)
+            h2 Estas pueden ser las razones:
+            ul
+                li La dirección URL o sus contenidos se han eliminado o cambiado de pagina de destino.
+                li El enlace no se colocó correctamente, el URL se enlazó de forma incorrecta o la dirección que el usuario introdujo en la barra del navegador no concuerda con el URL que estaba buscando.
+                li El servidor web responsable no está en funcionamiento.
+                li Quería ver la página 404, si es así felicidades, lo encontró :)
+            p.solucion_404 En cualquier caso si desea ver otro contenido intente con otro link.
+

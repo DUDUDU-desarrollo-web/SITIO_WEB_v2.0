@@ -859,8 +859,10 @@ footer p {
 }
 /* Acomodando los elementos internos */
 .mensaje_error_404 {
-    padding: 2rem;
     height: 100vh;
+    margin: auto;
+    padding: 2rem;
+    width: 60%;
 }
 .mensaje_error_404 h1, .mensaje_error_404 h2, .mensaje_error_404 ul, .mensaje_error_404 p {
     margin: 0rem;
@@ -887,7 +889,9 @@ footer p {
 }
 /* Acomodando los elementos internos */
 .texto_politica_privacidad {
+    margin: auto;
     padding: 2rem;
+    width: 60%;
 }
 .texto_politica_privacidad h1, .texto_politica_privacidad h2, .texto_politica_privacidad ul, .texto_politica_privacidad p {
     margin: 0rem;
@@ -1089,5 +1093,18 @@ footer p {
         padding: 2rem;
         width: auto;
     }
+    /* PAGINA DE AVISO DE PRIVACIDAD */
+    .texto_politica_privacidad {
+        margin: 0rem;
+        padding: 2rem;
+        width: auto;
+    }
+    /* PAGINA DE 404 */
+    .mensaje_error_404 {
+        margin: 0rem;
+        padding: 2rem;
+        width: auto;
+    }
+
 }
 

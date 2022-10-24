@@ -16,18 +16,9 @@ router.get('/servicios', function(req, res, next) {
   res.render('servicios', { title: 'SERVICIOS' });
 });
 
-/* GET portafolio page (portafolio.jade). */
-/*
-router.get('/portafolio', function(req, res, next) {
-  res.render('portafolio', { title: 'PORTAFOLIO' });
+/* GET aviso-privacidad page (aviso-privacidad.jade). */
+router.get('/aviso-privacidad', function(req, res, next) {
+  res.render('aviso-privacidad', { title: 'Aviso de privacidad' });
 });
-*/
-
-/* GET blog page (blog.jade). */
-/* 
-router.get('/blog', function(req, res, next) {
-  res.render('blog', { title: 'BLOG' });
-});
- */
 
 module.exports = router;
